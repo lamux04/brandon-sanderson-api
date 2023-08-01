@@ -1,0 +1,36 @@
+### GET ALL BOOKS
+GET http://localhost:1234/api/books
+
+### GET BOOKS BY SAGA
+GET http://localhost:1234/api/books/The-Stormlight-Archive
+
+### GET ALL URLS
+GET http://localhost:1234/api/buy
+
+### GET URLS BY ISBN
+GET http://localhost:1234/api/buy/978-0-7653-2636-2
+
+### POST BOOK
+POST http://localhost:1234/api/books
+Content-Type: application/json
+
+{
+  "ISBN": "0-7653-1178-X",
+  "name": "The Final Empire",
+  "publicationDate": "2006-07-17",
+  "saga": "Mistborn",
+  "planet": "Scadrial",
+  "pages": 647,
+  "shortNovel": false,
+  "urlImage": "https://m.media-amazon.com/images/I/91U6rc7u0yL._SL1500_.jpg"
+}
+
+### POST URLS
+POST http://localhost:1234/api/buy
+Content-Type: application/json
+
+{
+  "ISBN": "0-7653-1178-X",
+  "urlBuy": "https://www.amazon.es/Final-Empire-Mistborn-Book-One/dp/0575089911",
+  "shop": "Amazon" 
+}
